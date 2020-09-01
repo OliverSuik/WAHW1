@@ -4,16 +4,18 @@
     width: 100%;
 }
 
+body {
+
+}
+
 header h1 {
 
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 60px;
-    color: #ffffff;
+    font-size: 50px;
+    color: #001d24;
     line-height: 70px;
     text-transform: uppercase;
-    text-shadow: 2px 2px 8px #000000;
+    margin: 5px 0 5px 0;
 
 }
 
@@ -23,19 +25,14 @@ header h2 {
     font-weight: 300;
     font-size: 15px;
     letter-spacing: 5px;
-    color: #ffffff;
+    color: #001d24;
     text-transform: uppercase;
 
 }
 
 header .header-banner {
 
-    background-image: url("img/header.png");
     width: 100%;
-    height: calc(100vh - 500px);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     display: table;
 }
 
@@ -45,7 +42,7 @@ header .logo {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    padding: 10px 0 20px 0;
+    padding: 10px 0 0 0;
 }
 
 header nav ul {
@@ -53,7 +50,8 @@ header nav ul {
     display: block;
     margin: 0 auto;
     text-align: center; /*IE*/
-    width: fit-content;
+    width: 100%;
+    padding-left: 11px;
 
 }
 
@@ -68,12 +66,20 @@ nav ul li a {
 
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 19px;
     letter-spacing: 3px;
     color: #172029;
     text-transform: uppercase;
     text-decoration: none;
 
+}
+
+.banner {
+    background-image: url("img/cooking.jpg");
+    height: 300px;
+    background-size: cover; /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 footer {
@@ -111,7 +117,7 @@ footer ul li p {
 
 }
 
-footer ul li a {
+footer ul li {
 
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
@@ -128,7 +134,7 @@ footer ul li a {
 
     width: 32px;
     float: right;
-
+    padding-top: 22px;
 }
 
 .footer-sm img {
@@ -143,7 +149,7 @@ hr {
 
     color: #4f5663;
     border-width: 2px;
-    width: 30%;
+    width: 70%;
     margin: 0 auto;
     margin-bottom: 5px;
 
@@ -155,11 +161,9 @@ hr {
     font-weight: 600;
     font-size: 28px;
     letter-spacing: 2px;
-    padding: 10px;
     color: #3a383d;
+    margin-bottom: 12px;
     text-transform: uppercase;
-    text-align: center;
-
 }
 
 .gallery-image {
@@ -194,34 +198,41 @@ hr {
 
 }
 
-.disclaimer {
+.uspic {
+    display: none
+}
 
-    display: none;
+.container img {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+}
 
+.gallery-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 
-.gallery-links {
-
+.info {
     display: flex;
-    flex-flow: row wrap;
-    display: -webkit-flex;
-    -webkit-flex-flow: row wrap;
-    display: -moz-flex;
-    -moz-flex-flow: row wrap;
-    justify-content: center;
-    -o-flex-flow: row wrap;
-    justify-content: center;
+    list-style-type: none;
+    padding-left: 5px;
+    text-align: justify;
+}
 
+.info li {
+    flex: 50%;
+}
+
+.aboutext {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
 }
 
 @media only screen and (min-width: 950px) {
-
-    header .header-banner {
-
-        height: calc(100vh - 400px);
-
-    }
 
     header h1 a {
 
@@ -236,31 +247,51 @@ hr {
 
     }
 
-    header nav ul li {
-
-        padding: 16px 42px;
-
+    .about {
+        margin-left: 200px;
+        margin-right: 200px;
     }
 
-    .disclaimer {
 
+    .aboutext {
+        font-size: 24px;
+    }
+
+    .uspic {
         display: block;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 300;
-        font-size: 18px;
-        letter-spacing: 2px;
-        line-height: 24px;
-        color: #ffffff;
-        text-transform: uppercase;
+    }
+
+    .pic {
         float: left;
-        margin: 0 80px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .aboutext {
+        padding-right: 20px;
+    }
+
+
+    header nav ul li {
+        padding: 16px 120px;
+    }
+
+    nav ul li a {
+        font-size: 30px;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .gallery-links {
+        flex-direction: row;
 
     }
 
-    .disclaimer span {
-
-        font-style: italic;
-
+    .banner {
+        margin-left: 100px;
+        margin-right: 100px;
     }
-
 }
